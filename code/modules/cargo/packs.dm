@@ -662,6 +662,28 @@
 					/obj/item/clothing/gloves/combat)
 	crate_name = "swat crate"
 
+/datum/supply_pack/security/armory/cheapguns
+	name = "Surplus Guns Crate"
+	desc = "You need some guns on the cheap? Need more guns in your hands, fast? Here's what you want. Requires armory access, but I'm sure you're resourceful enough to get around it."
+	cost = 6000
+	contraband = TRUE
+	contains = list(/obj/item/gun/ballistic/automatic/surplus,
+					/obj/item/gun/ballistic/automatic/surplus,
+					/obj/item/ammo_box/magazine/m10mm/rifle,
+					/obj/item/ammo_box/magazine/m10mm/rifle,
+					/obj/item/gun/ballistic/shotgun,
+					/obj/item/gun/ballistic/shotgun/doublebarrel/improvised,
+					/obj/item/storage/box/lethalshot,
+					/obj/item/gun/ballistic/automatic/pistol/APS/semiauto,
+					/obj/item/ammo_box/magazine/pistolm9mm
+					)
+	crate_name = "surplus military crate"
+
+/datum/supply_pack/security/armory/cheapguns/fill(obj/structure/closet/crate/C)
+	for(var/i in 1 to 5)
+		var/item = pick(contains)
+		new item(C)
+
 /datum/supply_pack/security/armory/wt550_single
 	name = "Surplus Security Autorifle Single-Pack"
 	desc = "Contains one high-powered, semiautomatic rifle chambered in 4.6x30mm rounds. Requires Armory access to open."

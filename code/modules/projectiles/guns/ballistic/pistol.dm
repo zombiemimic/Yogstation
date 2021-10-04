@@ -82,6 +82,12 @@
 		"fire" = 2
 	)
 
+/obj/item/gun/ballistic/automatic/pistol/APS/semiauto
+	desc = "A simple copy of the widely used Syndicate sidearm. Uses 9mm ammo."
+	burst_size = 1
+	fire_delay = 0
+	actions_types = list()
+
 /obj/item/gun/ballistic/automatic/pistol/stickman
 	name = "flat gun"
 	desc = "A 2 dimensional gun.. what?"
